@@ -14,7 +14,8 @@ script: |
   sudo easy_install mock
   sudo easy_install webtest
   wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.7.zip
-  sudo unzip -a google_appengine_1.9.7.zip /usr/local/
+  sudo unzip -a google_appengine_1.9.7.zip -d /usr/local/
+  rm google_appengine_1.9.7.zip
   ls -l /usr/local
   python -V
 
