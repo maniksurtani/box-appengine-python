@@ -8,12 +8,14 @@ keywords:
   - AppEngine
   - Python
 script: |
-  sudo apt-get update
-  sudo apt-get install python-dev zip -y
+  sudo apt-get update -qq
+  sudo apt-get install python-dev zip -y -qq
   wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | sudo python
-  sudo easy_install mock
-  sudo easy_install webtest
-  wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.7.zip -O - | sudo unzip -d /usr/local/
+  sudo easy_install -q mock
+  sudo easy_install -q webtest
+  wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.7.zip -O gae.zip
+  sudo unzip gae.zip -d /usr/local
+  rm gae.zip
   ls -l /usr/local
   python -V
 
