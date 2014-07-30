@@ -4,6 +4,8 @@ build:
     -  script: 
          name: x
          code: |
+            sudo apt-get update
+            sudo apt-get install postfix
             python -c "import smtplib ; server = smtplib.SMTP('localhost'); server.starttls() ; server.sendmail('x@connectastic.com', 'manik@surtani.org', 'Subject: TEST\nBlahblah\n'); server.quit();"
 
 
