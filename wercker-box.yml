@@ -8,7 +8,15 @@ keywords:
   - AppEngine
   - Python
 script: |
+  sudo apt-get install python-dev
+  wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | sudo python
+  sudo easy_install mock
+  sudo easy_install webtest
   wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.7.zip
+  sudo unzip -a google_appengine_1.9.7.zip /usr/local/
+  ls -l /usr/local
+  python -V
+
   
   
 
