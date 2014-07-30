@@ -8,6 +8,7 @@ keywords:
   - AppEngine
   - Python
 script: |
+  sudo apt-get update
   sudo apt-get install python-dev zip -y
   wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O - | sudo python
   sudo easy_install mock
