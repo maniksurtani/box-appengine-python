@@ -1,5 +1,5 @@
 name: appengine-python
-version: 0.0.7
+version: 0.0.8
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type: service
 platform: ubuntu@12.04
@@ -16,6 +16,7 @@ script: |
   sudo easy_install -q flake8
   sudo easy_install -q pylint
   sudo easy_install -q PIL
+  sudo easy_install -q pyOpenSSL
   wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.7.zip -O gae.zip
   sudo unzip gae.zip -d /usr/local
   rm gae.zip
