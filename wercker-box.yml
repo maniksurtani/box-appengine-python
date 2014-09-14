@@ -17,7 +17,7 @@ script: |
   sudo easy_install -q pylint
   sudo easy_install -q PIL
   sudo easy_install -q pyOpenSSL
-  wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.7.zip -O gae.zip
+  wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.10.zip -O gae.zip
   sudo unzip gae.zip -d /usr/local
   rm gae.zip
   ls -l /usr/local
