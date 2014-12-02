@@ -20,7 +20,7 @@ script: |
   wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.15.zip -O gae.zip
   sudo unzip gae.zip -d /usr/local
   rm gae.zip
-  sudo add-apt-repository ppa:chris-lea/node.js
+  sudo add-apt-repository ppa:chris-lea/node.js -y
   sudo apt-get install npm -y -qq
   sudo npm install -g typescript
   ls -l /usr/local
