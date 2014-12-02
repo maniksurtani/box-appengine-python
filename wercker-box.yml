@@ -1,5 +1,5 @@
 name: appengine-python
-version: 0.0.8
+version: 0.0.9
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type: service
 platform: ubuntu@12.04
@@ -20,11 +20,10 @@ script: |
   wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.10.zip -O gae.zip
   sudo unzip gae.zip -d /usr/local
   rm gae.zip
+  sudo add-apt-repository ppa:chris-lea/node.js
+  sudo apt-get install npm -y -qq
+  sudo npm install -g typescript
   ls -l /usr/local
   python -V
-
-  
-  
-
-
+  tsc -v
 
